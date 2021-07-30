@@ -1,0 +1,145 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: #FF8303;
+    font-family: 'Roboto', sans-serif;
+    user-select: none;
+}
+
+body{
+    background: linear-gradient(to right, #232526,#414345);
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+}
+
+/* Logo e Menu */
+
+header{
+    display: flex;
+    justify-content: space-around;
+}
+
+header div img{
+    width: 6em;
+    margin-top: 20px;
+}
+
+ul{
+    list-style: none;
+    font-style: italic;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+}
+
+a{
+    font-size: 1em;
+    text-decoration: none;
+    padding: 10px;
+    margin: 10px;    
+}
+
+a:hover{    
+    color: #f5a657;
+    cursor: pointer;
+    transition: 0.5s ease-in-out ;
+    border-bottom: 1px solid #d1d1d1b7;
+}
+
+/* Apresentação */
+
+.presentation{
+    display: grid;
+    width: 98vw;
+    height: 75vh;
+}
+
+.container{
+    text-align: center;
+    margin: auto;
+}
+
+.container .name h1{
+    font-family: 'Dancing Script', cursive;
+    font-size: 6em;
+}
+
+.container .name h1:hover{
+    color: #da720a;
+    cursor: pointer;
+    transition: 1s ease-out ;
+}
+
+.container .name h5{
+    color: #d1d1d1b7;
+    font-size: 1.6em;    
+    cursor: pointer;
+}
+
+#arrow{
+    margin-top: 0.5em;
+    font-size: 2em;
+    cursor: pointer;
+    animation: blink  0.6s steps(5, start) infinite;
+}
+
+@keyframes blink{
+    to{
+     opacity: 0.3;
+    }
+}
+
+.rotate{
+    transform: rotate(-180deg);
+    transition: 300ms;
+}
+
+#animation{    
+    transition: 300ms;
+}
+
+#about p{
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 1.2em;
+}
+
+/* Ativa descrição about */
+.active{ 
+    display: block !important;
+}
+
+/* Responsividade */
+
+@media screen and (max-width: 620px){
+    
+    .container{
+        width: 80%;
+     }
+
+    .container .name h1{
+        font-size: 4.5em;
+    }
+    
+    .container .name h5{
+        font-size: 1.2em;
+    }    
+}
+
+@media screen and (max-width: 375px){
+    a{
+        /* font-size: 0.9em; */
+        margin: 05px;
+        padding: 2px;
+    }
+
+    header{
+        margin-top: 20px;
+    }
+
+    header div img{
+        width: 4em;
+    }
+}
